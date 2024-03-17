@@ -27,3 +27,9 @@ variable "databricks_account_id" {
   type        = string
   description = "(Required) Databricks Account ID"
 }
+
+variable "bucket_name" {
+  type = string
+  description = "The name of the S3 bucket used for data storage"
+  default = "rootbucket"
+}

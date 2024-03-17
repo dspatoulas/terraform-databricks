@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "root_storage_bucket" {
-  bucket        = "${var.prefix}-rootbucket"
+  bucket        = var.bucket_name
   force_destroy = true
   tags = merge(var.tags, {
-    Name = "${var.prefix}-rootbucket"
+    Name = var.bucket_name
   })
 }
 
